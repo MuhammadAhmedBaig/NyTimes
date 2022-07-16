@@ -18,6 +18,7 @@
 		F4ABCA3E28832A66008B163B /* NewsFeedTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA3D28832A66008B163B /* NewsFeedTV.swift */; };
 		F4ABCA4128832EA4008B163B /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA4028832EA4008B163B /* NewsFeedCell.swift */; };
 		F4ABCA4428833519008B163B /* HelpersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA4328833519008B163B /* HelpersProtocols.swift */; };
+		F4ABCA4E28836851008B163B /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA4D28836851008B163B /* NewsFeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F4ABCA3D28832A66008B163B /* NewsFeedTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTV.swift; sourceTree = "<group>"; };
 		F4ABCA4028832EA4008B163B /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		F4ABCA4328833519008B163B /* HelpersProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpersProtocols.swift; sourceTree = "<group>"; };
+		F4ABCA4D28836851008B163B /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		F4ABCA3C2883271E008B163B /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				F4ABCA4D28836851008B163B /* NewsFeedViewModel.swift */,
 				F4ABCA4528833577008B163B /* TableView */,
 				F4ABCA1028830E22008B163B /* NewsFeedView.swift */,
 			);
@@ -298,6 +301,7 @@
 				F4ABCA4128832EA4008B163B /* NewsFeedCell.swift in Sources */,
 				F4ABCA4428833519008B163B /* HelpersProtocols.swift in Sources */,
 				F4ABCA1128830E22008B163B /* NewsFeedView.swift in Sources */,
+				F4ABCA4E28836851008B163B /* NewsFeedViewModel.swift in Sources */,
 				F4ABCA0D28830E22008B163B /* AppDelegate.swift in Sources */,
 				F4ABCA3E28832A66008B163B /* NewsFeedTV.swift in Sources */,
 				F4ABCA0F28830E22008B163B /* SceneDelegate.swift in Sources */,
