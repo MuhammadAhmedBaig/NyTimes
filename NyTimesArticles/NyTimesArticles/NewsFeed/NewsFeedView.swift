@@ -15,14 +15,18 @@ class NewsFeedView: UIViewController {
         return tv
     }()
     
+    var viewModel: NewsFeedViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        viewModel = NewsFeedViewModel(delegate: self)
         self.addViews()
         self.setupConstraintsForBackView()
         
         self.setupTableView()
+        viewModel?.getNewsFeeds()
     }
     
     private func addViews() {
@@ -56,13 +60,16 @@ extension NewsFeedView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.viewModel?.getUIModelsCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell: NewsFeedCell = tableView.dequeueReusableCell(withIdentifier: NewsFeedCell.getIdentifier(), for: indexPath) as? NewsFeedCell {
+        if let cell: NewsFeedCell = tableView.dequeueReusableCell(withIdentifier: NewsFeedCell.getIdentifier(),
+                                                                  for: indexPath) as? NewsFeedCell,
+        let uiModelForIndex = self.viewModel?.getUIModel(atIndex: indexPath.row){
             cell.selectionStyle = .none
             cell.setupView()
+            cell.setupData(fromModel: uiModelForIndex)
             return cell
         }
         return UITableViewCell()
@@ -73,6 +80,18 @@ extension NewsFeedView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 180
+    }
+}
+
+extension NewsFeedView: NewsFeedVMDelegate, Alertable {
+    func sucessWhileFetchingData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func show(error msg: String) {
+        showAlert(message: msg)
     }
 }

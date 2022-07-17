@@ -106,4 +106,19 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         self.dateLbl.bottomAnchor.constraint(equalTo: autherLbl.bottomAnchor).isActive = true
         self.dateLbl.rightAnchor.constraint(equalTo: self.backView.rightAnchor, constant: -10).isActive = true
     }
+    
+    func setupData(fromModel uiModel: NewsUIModel) {
+//        self.imgView.image = uiModel.imageURL
+        self.autherLbl.text = uiModel.auther
+        self.autherLbl.font = uiModel.autherFont
+        self.autherLbl.textColor = uiModel.autherColor
+        
+        self.dateLbl.text = uiModel.date
+        self.dateLbl.font = uiModel.dateFont
+        self.dateLbl.textColor = uiModel.dateColor
+        
+        self.titleLbl.text = uiModel.title
+        self.titleLbl.font = uiModel.titleFont
+        self.titleLbl.textColor = uiModel.titleColor
+    }
 }
