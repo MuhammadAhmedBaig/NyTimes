@@ -7,18 +7,20 @@
 
 import UIKit
 
-class NewsFeedCell: UITableViewCell, IdentifiableCell {
+class NewsFeedCell: UITableViewCell, IdentifiableCell, Shadowable {
     
     var backView: UIView = {
         let bView = UIView()
         bView.translatesAutoresizingMaskIntoConstraints = false
-        bView.backgroundColor = .red
+        bView.backgroundColor = .white
         return bView
     }()
     
     var imgView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFill
+        imgView.clipsToBounds = true
         return imgView
     }()
     
@@ -26,7 +28,9 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "---"
-        lbl.numberOfLines = 2
+        lbl.numberOfLines = 3
+        lbl.font = UIFont.boldSystemFont(ofSize: 18.0)
+        lbl.textColor = .black
         return lbl
     }()
     
@@ -35,6 +39,8 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "---"
         lbl.numberOfLines = 1
+        lbl.font = UIFont.systemFont(ofSize: 12.0)
+        lbl.textColor = .black
         return lbl
     }()
     
@@ -43,8 +49,15 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "----"
         lbl.numberOfLines = 1
+        lbl.font = UIFont.systemFont(ofSize: 12.0)
+        lbl.textColor = .black
         return lbl
     }()
+    
+    override func layoutSubviews() {
+//        self.makeShadowAndCornerRadius(toView: self.backView)
+        self.imgView.layer.cornerRadius = 8.0
+    }
     
     func setupView() {
         // Initialization code
@@ -88,7 +101,8 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
     
     private func setupConstraintsForTitleLbl() {
         self.titleLbl.topAnchor.constraint(equalTo: imgView.topAnchor).isActive = true
-        self.titleLbl.leftAnchor.constraint(equalTo: imgView.rightAnchor, constant: -10).isActive = true
+        self.titleLbl.leftAnchor.constraint(equalTo: imgView.rightAnchor, constant: 10).isActive = true
+        self.titleLbl.rightAnchor.constraint(equalTo: self.backView.rightAnchor, constant: -10).isActive = true
     }
     
     private func setupConstraintsForAutherLbl() {
@@ -97,28 +111,20 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         self.autherLbl.bottomAnchor.constraint(equalTo: imgView.bottomAnchor).isActive = true
         
         self.autherLbl.setContentHuggingPriority(.defaultHigh, for: .vertical)
-        self.autherLbl.setContentHuggingPriority(.defaultLow, for: .horizontal)
     }
     
     private func setupConstraintsForDataLbl() {
         self.dateLbl.topAnchor.constraint(equalTo: autherLbl.topAnchor).isActive = true
         self.dateLbl.leftAnchor.constraint(equalTo: autherLbl.rightAnchor, constant: 10).isActive = true
         self.dateLbl.bottomAnchor.constraint(equalTo: autherLbl.bottomAnchor).isActive = true
-        self.dateLbl.rightAnchor.constraint(equalTo: self.backView.rightAnchor, constant: -10).isActive = true
+        self.dateLbl.rightAnchor.constraint(equalTo: self.titleLbl.rightAnchor).isActive = true
+        self.dateLbl.setContentHuggingPriority(.defaultHigh, for: .horizontal)
     }
     
     func setupData(fromModel uiModel: NewsUIModel) {
-//        self.imgView.image = uiModel.imageURL
+        self.imgView.setImage(from: uiModel.imageURL)
         self.autherLbl.text = uiModel.auther
-        self.autherLbl.font = uiModel.autherFont
-        self.autherLbl.textColor = uiModel.autherColor
-        
         self.dateLbl.text = uiModel.date
-        self.dateLbl.font = uiModel.dateFont
-        self.dateLbl.textColor = uiModel.dateColor
-        
         self.titleLbl.text = uiModel.title
-        self.titleLbl.font = uiModel.titleFont
-        self.titleLbl.textColor = uiModel.titleColor
     }
 }

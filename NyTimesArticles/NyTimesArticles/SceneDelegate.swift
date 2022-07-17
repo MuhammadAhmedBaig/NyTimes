@@ -18,14 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        setupCoordinator(windowScene: windowScene)
+        makeCoordinator(windowScene: windowScene)
     }
     
-    private func setupCoordinator(windowScene: UIWindowScene) {
+    private func makeCoordinator(windowScene: UIWindowScene) {
         let window = UIWindow(windowScene: windowScene)
-        let viewController = NewsFeedView()
-        let navigation = UINavigationController(rootViewController: viewController)
+        window.overrideUserInterfaceStyle = .light
+        let navigation = UINavigationController()
         window.rootViewController = navigation
+        let coordinator = AppCoordinator(navigationController: navigation)
+        coordinator.start()
         self.window = window
         window.makeKeyAndVisible()
     }
