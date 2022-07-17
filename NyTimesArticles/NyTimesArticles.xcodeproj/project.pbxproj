@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F489ACFC28847275008306A2 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489ACFB28847275008306A2 /* NewsModel.swift */; };
 		F4ABCA0D28830E22008B163B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA0C28830E22008B163B /* AppDelegate.swift */; };
 		F4ABCA0F28830E22008B163B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA0E28830E22008B163B /* SceneDelegate.swift */; };
 		F4ABCA1128830E22008B163B /* NewsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABCA1028830E22008B163B /* NewsFeedView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F489ACFB28847275008306A2 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		F4ABCA0928830E22008B163B /* NyTimesArticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyTimesArticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ABCA0C28830E22008B163B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4ABCA0E28830E22008B163B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F489ACFA28847262008306A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F489ACFB28847275008306A2 /* NewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F4ABCA0028830E21008B163B = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		F4ABCA0B28830E22008B163B /* NyTimesArticles */ = {
 			isa = PBXGroup;
 			children = (
+				F489ACFA28847262008306A2 /* Models */,
 				F4ABCA42288334FE008B163B /* Helpers */,
 				F4ABCA3C2883271E008B163B /* NewsFeed */,
 				F4ABCA0C28830E22008B163B /* AppDelegate.swift */,
@@ -287,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F489ACFC28847275008306A2 /* NewsModel.swift in Sources */,
 				F4ABCA4128832EA4008B163B /* NewsFeedCell.swift in Sources */,
 				F4ABCA4428833519008B163B /* HelpersProtocols.swift in Sources */,
 				F4ABCA1128830E22008B163B /* NewsFeedView.swift in Sources */,
