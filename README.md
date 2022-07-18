@@ -40,12 +40,17 @@ http://api.nytimes.com/svc/mostpopular/v2/mostviewed/{section}/{period}.json?api
 
 # Which Architecture is used in the app?
 
-I implementated MVVM with Clean Arhitecture.
+The app is implementated on MVVM with Clean Arhitecture.
 
 - MVVM -> For the Presentation.
 - UseCase -> For the Domain Logic.
 - Repository -> For the Data.
 - Coordinator -> For App Routing.
+
+###### Few things to understand.
+- You may find UIModel which contains only those properties which will help presentation layer to show and pass data.
+- UI has been done with programmatic constraints approach.
+- Repository and API Calls layer accessed through Dependency Inversion.
 
 
 # Improvements for the future.
