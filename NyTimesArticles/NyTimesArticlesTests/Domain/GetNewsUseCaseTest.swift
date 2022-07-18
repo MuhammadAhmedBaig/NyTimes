@@ -23,7 +23,7 @@ class GetNewsUseCaseTest: XCTestCase {
             case .success(let newsList):
                 XCTAssert(newsList.count == 4)
                 XCTAssert(newsList.first?.auther == "Steve Jobs")
-            case .failure(let error):
+            case .failure(_):
                 break
             }
         }

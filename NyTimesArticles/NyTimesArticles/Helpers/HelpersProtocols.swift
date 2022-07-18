@@ -22,31 +22,6 @@ extension IdentifiableCell {
     }
 }
 
-
-protocol Shadowable {
-    func makeShadowAndCornerRadius(toView view: UIView,
-                                   cornerRadius: CGFloat,
-                                   shadowColor: CGColor,
-                                   shadowOffset: CGSize,
-                                   shadowRadius: CGFloat,
-                                   shadowOpacity: Float)
-}
-
-extension Shadowable {
-    func makeShadowAndCornerRadius(toView view: UIView,
-                                   cornerRadius: CGFloat = 20.0,
-                                   shadowColor: CGColor = UIColor.gray.cgColor,
-                                   shadowOffset: CGSize = CGSize.zero,
-                                   shadowRadius: CGFloat = 6.0,
-                                   shadowOpacity: Float = 0.5) {
-        view.layer.cornerRadius = cornerRadius
-        view.layer.shadowColor = shadowColor
-        view.layer.shadowOffset = shadowOffset
-        view.layer.shadowRadius = shadowRadius
-        view.layer.shadowOpacity = shadowOpacity
-    }
-}
-
 public protocol Alertable {}
 public extension Alertable where Self: UIViewController {
     
