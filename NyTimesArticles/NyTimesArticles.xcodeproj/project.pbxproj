@@ -237,9 +237,8 @@
 		F489AD222884CA25008306A2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F489AD232884CA3F008306A2 /* GetNewsUseCaseTest.swift */,
-				F489AD252884CAF7008306A2 /* FakeNewsAPICalls.swift */,
 				F408F64728859F6D000C3B11 /* FakeGetNewsUseCase.swift */,
+				F489AD232884CA3F008306A2 /* GetNewsUseCaseTest.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -305,6 +304,7 @@
 				F408F64428859F14000C3B11 /* IntegrationTest */,
 				F489AD272884CDBC008306A2 /* Presentation */,
 				F489AD222884CA25008306A2 /* Domain */,
+				F489AD252884CAF7008306A2 /* FakeNewsAPICalls.swift */,
 				F408F6492885A022000C3B11 /* FakeNewsFeedData.swift */,
 			);
 			path = NyTimesArticlesTests;
