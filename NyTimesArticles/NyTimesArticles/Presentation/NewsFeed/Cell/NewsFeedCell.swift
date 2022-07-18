@@ -64,6 +64,14 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         self.setupConstriants()
     }
     
+    func setupData(fromModel uiModel: NewsUIModel) {
+        self.imgView.setImage(from: uiModel.imageURL)
+        self.autherLbl.text = uiModel.auther
+        self.dateLbl.text = uiModel.date
+        self.titleLbl.text = uiModel.title
+    }
+    
+    // MARK: - Add Views and Setup Constraints
     private func addViews() {
         self.backgroundColor = .white
         self.contentView.addSubview(self.backView)
@@ -120,12 +128,5 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         self.dateLbl.rightAnchor.constraint(equalTo: self.titleLbl.rightAnchor).isActive = true
         
         self.dateLbl.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-    }
-    
-    func setupData(fromModel uiModel: NewsUIModel) {
-        self.imgView.setImage(from: uiModel.imageURL)
-        self.autherLbl.text = uiModel.auther
-        self.dateLbl.text = uiModel.date
-        self.titleLbl.text = uiModel.title
     }
 }

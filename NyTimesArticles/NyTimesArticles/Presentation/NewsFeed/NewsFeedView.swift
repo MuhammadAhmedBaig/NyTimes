@@ -74,6 +74,7 @@ class NewsFeedView: UIViewController {
     
 }
 
+// MARK: - TableView Delegates
 extension NewsFeedView: UITableViewDelegate, UITableViewDataSource {
     
     func registerCells() {
@@ -105,6 +106,7 @@ extension NewsFeedView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - ViewModel Delegates, and Implement Alertable to show alert
 extension NewsFeedView: NewsFeedVMDelegate, Alertable {
     func sucessWhileFetchingData() {
         DispatchQueue.main.async { [weak self] in

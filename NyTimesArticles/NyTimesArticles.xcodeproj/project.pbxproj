@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F408F6432885934A000C3B11 /* NewsDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408F6422885934A000C3B11 /* NewsDetailViewModelTest.swift */; };
+		F408F64628859F28000C3B11 /* NewsFeedIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408F64528859F28000C3B11 /* NewsFeedIntegrationTest.swift */; };
+		F408F64828859F6D000C3B11 /* FakeGetNewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408F64728859F6D000C3B11 /* FakeGetNewsUseCase.swift */; };
+		F408F64A2885A022000C3B11 /* FakeNewsFeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408F6492885A022000C3B11 /* FakeNewsFeedData.swift */; };
 		F489ACFC28847275008306A2 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489ACFB28847275008306A2 /* NewsModel.swift */; };
 		F489ACFF288484B7008306A2 /* GetNewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489ACFE288484B7008306A2 /* GetNewsUseCase.swift */; };
 		F489AD0128848530008306A2 /* NewsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489AD0028848530008306A2 /* NewsUIModel.swift */; };
@@ -57,6 +60,9 @@
 
 /* Begin PBXFileReference section */
 		F408F6422885934A000C3B11 /* NewsDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModelTest.swift; sourceTree = "<group>"; };
+		F408F64528859F28000C3B11 /* NewsFeedIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedIntegrationTest.swift; sourceTree = "<group>"; };
+		F408F64728859F6D000C3B11 /* FakeGetNewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGetNewsUseCase.swift; sourceTree = "<group>"; };
+		F408F6492885A022000C3B11 /* FakeNewsFeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNewsFeedData.swift; sourceTree = "<group>"; };
 		F489ACFB28847275008306A2 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		F489ACFE288484B7008306A2 /* GetNewsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNewsUseCase.swift; sourceTree = "<group>"; };
 		F489AD0028848530008306A2 /* NewsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUIModel.swift; sourceTree = "<group>"; };
@@ -116,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F408F64428859F14000C3B11 /* IntegrationTest */ = {
+			isa = PBXGroup;
+			children = (
+				F408F64528859F28000C3B11 /* NewsFeedIntegrationTest.swift */,
+			);
+			path = IntegrationTest;
+			sourceTree = "<group>";
+		};
 		F489ACFA28847262008306A2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +224,7 @@
 			children = (
 				F489AD232884CA3F008306A2 /* GetNewsUseCaseTest.swift */,
 				F489AD252884CAF7008306A2 /* FakeNewsAPICalls.swift */,
+				F408F64728859F6D000C3B11 /* FakeGetNewsUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -271,8 +286,10 @@
 		F4ABCA2228830E25008B163B /* NyTimesArticlesTests */ = {
 			isa = PBXGroup;
 			children = (
+				F408F64428859F14000C3B11 /* IntegrationTest */,
 				F489AD272884CDBC008306A2 /* Presentation */,
 				F489AD222884CA25008306A2 /* Domain */,
+				F408F6492885A022000C3B11 /* FakeNewsFeedData.swift */,
 			);
 			path = NyTimesArticlesTests;
 			sourceTree = "<group>";
@@ -473,10 +490,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F408F64828859F6D000C3B11 /* FakeGetNewsUseCase.swift in Sources */,
+				F408F64628859F28000C3B11 /* NewsFeedIntegrationTest.swift in Sources */,
 				F489AD262884CAF7008306A2 /* FakeNewsAPICalls.swift in Sources */,
 				F408F6432885934A000C3B11 /* NewsDetailViewModelTest.swift in Sources */,
 				F489AD242884CA3F008306A2 /* GetNewsUseCaseTest.swift in Sources */,
 				F489AD292884CDD7008306A2 /* NewsFeedViewModelTest.swift in Sources */,
+				F408F64A2885A022000C3B11 /* FakeNewsFeedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

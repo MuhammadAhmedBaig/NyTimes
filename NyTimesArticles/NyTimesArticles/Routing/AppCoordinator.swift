@@ -25,7 +25,7 @@ class AppCoordinator: Coordinator {
         return NewsFeedViewModel(useCase: makeGetNewsUseCase())
     }
     
-    private func makeGetNewsUseCase() -> GetNewsUseCase {
+    private func makeGetNewsUseCase() -> GetNewsUseCaseProtocol {
         return GetNewsUseCase(repo: makeNewsRepository())
     }
     

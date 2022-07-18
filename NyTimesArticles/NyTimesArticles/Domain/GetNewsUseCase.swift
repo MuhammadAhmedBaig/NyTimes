@@ -7,7 +7,11 @@
 
 import Foundation
 
-class GetNewsUseCase {
+protocol GetNewsUseCaseProtocol {
+    func execute(completion: @escaping (Result<[News], NYError>) -> Void)
+}
+
+class GetNewsUseCase: GetNewsUseCaseProtocol {
     private let repo: NewsFeedRepoProtocol
     
     init(repo: NewsFeedRepoProtocol = NewsRepository()) {

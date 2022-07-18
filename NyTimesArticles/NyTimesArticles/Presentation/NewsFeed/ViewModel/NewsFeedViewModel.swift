@@ -17,10 +17,10 @@ protocol NewsFeedVMDelegate: AnyObject {
 class NewsFeedViewModel {
     
     weak var delegate: NewsFeedVMDelegate?
-    private var useCase: GetNewsUseCase
+    private var useCase: GetNewsUseCaseProtocol
     private var uiModels = [NewsUIModel]()
     
-    init(useCase: GetNewsUseCase) {
+    init(useCase: GetNewsUseCaseProtocol) {
         self.useCase = useCase
     }
     
