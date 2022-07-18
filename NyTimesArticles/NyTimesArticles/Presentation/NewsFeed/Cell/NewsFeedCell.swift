@@ -91,10 +91,10 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
     }
     
     private func setupConstraintsForImageView() {
-        self.imgView.topAnchor.constraint(equalTo: self.backView.topAnchor, constant: 10).isActive = true
-        self.imgView.bottomAnchor.constraint(equalTo: self.backView.bottomAnchor, constant: -10).isActive = true
+        self.imgView.centerYAnchor.constraint(equalTo: self.backView.centerYAnchor).isActive = true
         self.imgView.leftAnchor.constraint(equalTo: self.backView.leftAnchor, constant: 10).isActive = true
         
+        self.imgView.heightAnchor.constraint(equalTo: self.backView.heightAnchor, multiplier: 0.8).isActive = true
         self.imgView.widthAnchor.constraint(equalTo: self.imgView.heightAnchor).isActive = true
     }
     
@@ -109,6 +109,7 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         self.autherLbl.leftAnchor.constraint(equalTo: titleLbl.leftAnchor).isActive = true
         self.autherLbl.bottomAnchor.constraint(equalTo: imgView.bottomAnchor).isActive = true
         
+        self.autherLbl.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         self.autherLbl.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
@@ -117,7 +118,8 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell {
         self.dateLbl.leftAnchor.constraint(equalTo: autherLbl.rightAnchor, constant: 10).isActive = true
         self.dateLbl.bottomAnchor.constraint(equalTo: autherLbl.bottomAnchor).isActive = true
         self.dateLbl.rightAnchor.constraint(equalTo: self.titleLbl.rightAnchor).isActive = true
-        self.dateLbl.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        
+        self.dateLbl.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     }
     
     func setupData(fromModel uiModel: NewsUIModel) {

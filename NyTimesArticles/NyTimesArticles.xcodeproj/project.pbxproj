@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F408F6432885934A000C3B11 /* NewsDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408F6422885934A000C3B11 /* NewsDetailViewModelTest.swift */; };
 		F489ACFC28847275008306A2 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489ACFB28847275008306A2 /* NewsModel.swift */; };
 		F489ACFF288484B7008306A2 /* GetNewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489ACFE288484B7008306A2 /* GetNewsUseCase.swift */; };
 		F489AD0128848530008306A2 /* NewsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489AD0028848530008306A2 /* NewsUIModel.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F408F6422885934A000C3B11 /* NewsDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModelTest.swift; sourceTree = "<group>"; };
 		F489ACFB28847275008306A2 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		F489ACFE288484B7008306A2 /* GetNewsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNewsUseCase.swift; sourceTree = "<group>"; };
 		F489AD0028848530008306A2 /* NewsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUIModel.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F489AD282884CDD7008306A2 /* NewsFeedViewModelTest.swift */,
+				F408F6422885934A000C3B11 /* NewsDetailViewModelTest.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F489AD262884CAF7008306A2 /* FakeNewsAPICalls.swift in Sources */,
+				F408F6432885934A000C3B11 /* NewsDetailViewModelTest.swift in Sources */,
 				F489AD242884CA3F008306A2 /* GetNewsUseCaseTest.swift in Sources */,
 				F489AD292884CDD7008306A2 /* NewsFeedViewModelTest.swift in Sources */,
 			);

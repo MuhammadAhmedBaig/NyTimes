@@ -35,6 +35,8 @@ public extension Alertable where Self: UIViewController {
         alert.addAction(UIAlertAction(title: "OK",
                                       style: UIAlertAction.Style.default,
                                       handler: nil))
-        self.present(alert, animated: true, completion: completion)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: completion)
+        }
     }
 }

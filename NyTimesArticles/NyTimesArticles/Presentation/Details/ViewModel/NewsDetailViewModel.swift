@@ -13,7 +13,7 @@ protocol NewsDetailViewModelDelegate: AnyObject {
 }
 
 class NewsDetailViewModel {
-    let urlString: String
+    private let urlString: String
     weak var delegate: NewsDetailViewModelDelegate?
     
     init(urlString: String) {
@@ -21,10 +21,17 @@ class NewsDetailViewModel {
     }
     
     func resolveAndShowDetails() {
-        guard let url = URL(string: urlString) else {
+        guard let request = self.generateRequest() else {
             self.delegate?.show(Error: Constants.Error.invalidURL.rawValue)
             return
         }
-        self.delegate?.load(URLRequest: URLRequest(url: url))
+        self.delegate?.load(URLRequest: request)
+    }
+    
+    func generateRequest() -> URLRequest? {
+        guard let url = URL(string: urlString) else {
+            return nil
+        }
+        return URLRequest(url: url)
     }
 }
