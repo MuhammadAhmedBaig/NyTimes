@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsFeedCell: UITableViewCell, IdentifiableCell, Shadowable {
+class NewsFeedCell: UITableViewCell, IdentifiableCell {
     
     var backView: UIView = {
         let bView = UIView()
@@ -55,7 +55,6 @@ class NewsFeedCell: UITableViewCell, IdentifiableCell, Shadowable {
     }()
     
     override func layoutSubviews() {
-//        self.makeShadowAndCornerRadius(toView: self.backView)
         self.imgView.layer.cornerRadius = 8.0
     }
     
