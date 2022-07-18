@@ -16,7 +16,10 @@ http://api.nytimes.com/svc/mostpopular/v2/mostviewed/{section}/{period}.json?api
 
 # How do I Clone Project?
 
-###### Can be clone by using HTTPS "https://github.com/MuhammadAhmedBaig/NyTimes.git" or You can download zip.
+- Can be clone by using HTTPS "https://github.com/MuhammadAhmedBaig/NyTimes.git".
+- Can be downloaded as Zip.
+- Checkout **develop** branch.
+
 
 # How do I Build Project, Run TestCases?
 
