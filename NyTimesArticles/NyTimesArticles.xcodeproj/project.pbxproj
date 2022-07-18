@@ -130,6 +130,23 @@
 			path = IntegrationTest;
 			sourceTree = "<group>";
 		};
+		F408F64B2885A38B000C3B11 /* GetNewsUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				F489ACFE288484B7008306A2 /* GetNewsUseCase.swift */,
+			);
+			path = GetNewsUseCase;
+			sourceTree = "<group>";
+		};
+		F408F64C2885A3A6000C3B11 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F489AD04288485EF008306A2 /* Repositories */,
+				F489ACFA28847262008306A2 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		F489ACFA28847262008306A2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +158,7 @@
 		F489ACFD2884847F008306A2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F489AD04288485EF008306A2 /* Repositories */,
-				F489ACFA28847262008306A2 /* Entities */,
-				F489ACFE288484B7008306A2 /* GetNewsUseCase.swift */,
+				F408F64B2885A38B000C3B11 /* GetNewsUseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -269,6 +284,7 @@
 		F4ABCA0B28830E22008B163B /* NyTimesArticles */ = {
 			isa = PBXGroup;
 			children = (
+				F408F64C2885A3A6000C3B11 /* Data */,
 				F489AD1B2884C130008306A2 /* Routing */,
 				F489AD152884BB8E008306A2 /* Presentation */,
 				F489AD07288486E4008306A2 /* Network */,
