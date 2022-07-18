@@ -1,7 +1,7 @@
 # NyTimes
 This app shows user the most viewed and most popular articles of New York Times.
 
-### What is this repository for? ###
+# What's in the Readme
 
 * Quick summary
 * How do I Clone Project?
@@ -16,7 +16,7 @@ http://api.nytimes.com/svc/mostpopular/v2/mostviewed/{section}/{period}.json?api
 
 # How do I Clone Project?
 
-###### GitHub Repository Setup - [NYTimes](https://github.com/MuhammadAhmedBaig/NyTimes.git), Clone the project from repo.
+###### Can be clone by using HTTPS "https://github.com/MuhammadAhmedBaig/NyTimes.git" or You can download zip.
 
 # How do I Build Project, Run TestCases?
 
