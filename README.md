@@ -35,7 +35,7 @@ http://api.nytimes.com/svc/mostpopular/v2/mostviewed/{section}/{period}.json?api
 
 - To Generate Code coverage report, you first need to enable code coverage from scheme.
 - Then you need to run all testcase by pressing CMD + U.
-- Go to the "Show the report navigator" from the left top tab of XCode.
+- Go to the "Show the report navigator" from the top-left tab of XCode.
 - Go to the "Coverage" and you will see the code coverage report.
 
 # Which Architecture is used in the app?
